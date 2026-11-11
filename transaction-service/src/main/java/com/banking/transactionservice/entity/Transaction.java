@@ -38,10 +38,6 @@ public class Transaction {
     @CreationTimestamp
     private LocalDateTime createdAt;
     private LocalDateTime completed;
-<<<<<<< HEAD
-=======
-
->>>>>>> a6a4e48 (Completed the transaction service and Started thr fraud detection service)
 
 
 }
