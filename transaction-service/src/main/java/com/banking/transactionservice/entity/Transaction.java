@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
 public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-     private String  id;
+    private String  id;
     @Column(nullable = false)
     private String senderAccountNumber;
     @Column(nullable = false)
@@ -37,7 +37,8 @@ public class Transaction {
     private String referenceNumber;
     @CreationTimestamp
     private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+    private LocalDateTime completed;
+
 
 
 }
