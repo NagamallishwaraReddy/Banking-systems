@@ -1,11 +1,11 @@
 package com.banking.transactionservice.entity;
 
-import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
-import org.springframework.cglib.core.Local;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -14,10 +14,14 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="transaction")
-public class transaction {
+@Getter
+@Setter
+public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
      private String  id;
+    @Column(nullable = false)
+    private String senderAccountNumber;
     @Column(nullable = false)
     private String receiverAccountNumber;
     @Column(nullable = false,precision = 15,scale = 2)
@@ -28,11 +32,16 @@ public class transaction {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private TransactionStatus status;
+    private String description;
     private String failureReason;
     private String referenceNumber;
     @CreationTimestamp
     private LocalDateTime createdAt;
     private LocalDateTime completed;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a6a4e48 (Completed the transaction service and Started thr fraud detection service)
 
 
 }
