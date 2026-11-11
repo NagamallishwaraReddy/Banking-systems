@@ -32,7 +32,7 @@ public class transaction {
     private String referenceNumber;
     @CreationTimestamp
     private LocalDateTime createdAt;
-    private LocalDateTime completed;
+    private LocalDateTime updatedAt;
 
 
 }
